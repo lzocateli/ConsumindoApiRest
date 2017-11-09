@@ -37,6 +37,19 @@ namespace ExemploConsumindoApiRest
             ///// parametros solicitados pelo serviço ///////////
             var parametrosUrl = $"{uf}/{cidade}/{logradouro}/json/";
 
+            /////////////////////////////////////////////////////////////////////////////////
+            /// IMPORTANTE:
+            /// Dependendo de como o desenvolvedor construiu a Api
+            /// os parametros da url pode ser passadas da seguinte forma:
+            /// 
+            ///var parametrosUrl = $"?uf={uf}&cidade={cidade}&logradouro={logradouro}";
+            ///
+            /// ou seja, utilize ? para iniciar os parametros e
+            ///          utilize & para separar um parametro de outro.
+            ///          utilize = para separar o nome do parametro da variavel contendo 
+            ///          o valor
+            ///////////////////////////////////////////////////////////////////////////////
+
 
             ///// a concatenação da url e parametros formam o endpoint do serviço ///////////
             var endPoint = $"{baseUrl}{parametrosUrl}";
